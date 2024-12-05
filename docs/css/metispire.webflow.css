@@ -2999,6 +2999,7 @@ figcaption {
 }
 
 .blog-posts-list-wrapper {
+  grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -3725,7 +3726,7 @@ figcaption {
 }
 
 .projects-list-wrapper {
-  grid-template-rows: auto;
+  grid-template-rows: auto auto auto;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -3831,7 +3832,7 @@ figcaption {
 }
 
 .templates-list-wrapper {
-  grid-template-rows: auto;
+  grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -3941,7 +3942,7 @@ figcaption {
 }
 
 .news-posts-list-wrapper {
-  grid-template-rows: auto;
+  grid-template-rows: auto auto auto;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -4011,7 +4012,7 @@ figcaption {
 }
 
 .jobs-posts-list-wrapper {
-  grid-template-rows: auto;
+  grid-template-rows: auto auto auto;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -4775,6 +4776,42 @@ figcaption {
   grid-template-columns: 1fr 1fr;
 }
 
+.portfolio-layout-row {
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: 1fr;
+  display: grid;
+}
+
+.blog-layout-row {
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  display: grid;
+}
+
+.blog-post-layout-row, .template-layout-row {
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  display: grid;
+}
+
+.projects-layout-row, .news-layout-row, .jobs-layout-row {
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  display: grid;
+}
+
 @media screen and (max-width: 991px) {
   h1 {
     font-size: 3.25rem;
@@ -5049,6 +5086,10 @@ figcaption {
     grid-template-columns: 1fr;
   }
 
+  .blog-posts-list-wrapper {
+    grid-auto-flow: row;
+  }
+
   .blog-posts-list {
     grid-template-columns: 1fr 1fr;
   }
@@ -5284,6 +5325,10 @@ figcaption {
 
   .template {
     position: static;
+  }
+
+  .portfolio-layout-row, .blog-layout-row, .blog-post-layout-row, .template-layout-row, .projects-layout-row, .news-layout-row, .jobs-layout-row {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -5979,6 +6024,12 @@ figcaption {
     font-size: 36px;
     line-height: 36px;
   }
+
+  .portfolio-layout-row, .blog-layout-row, .blog-post-layout-row, .template-layout-row, .projects-layout-row, .news-layout-row, .jobs-layout-row {
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -6245,7 +6296,23 @@ figcaption {
   align-self: start;
 }
 
-#w-node-a758485a-fc5c-4fb0-9450-f3a8c55e9200-043ff306, #Subscribe-Form-Email.w-node-_74c27a83-88a8-f89d-a0be-2328adc4cd6b-adc4cd5d, #w-node-da2700ca-465a-f222-3a16-6d57534905d8-534905cc {
+#w-node-a758485a-fc5c-4fb0-9450-f3a8c55e9200-043ff306 {
+  grid-area: span 1 / span 1 / span 1 / span 1;
+}
+
+#w-node-edf5c0eb-f25a-8390-0d7e-369603edb319-043ff306 {
+  grid-area: span 1 / span 2 / span 1 / span 2;
+}
+
+#w-node-_38a2c0b5-ebea-a5ed-371b-dfb43f953bac-043ff306 {
+  grid-area: span 2 / span 3 / span 2 / span 3;
+}
+
+#w-node-d7c580a5-3dbc-a278-e71f-639d38ca17cd-043ff30d {
+  grid-area: span 10 / span 3 / span 10 / span 3;
+}
+
+#Subscribe-Form-Email.w-node-_74c27a83-88a8-f89d-a0be-2328adc4cd6b-adc4cd5d, #w-node-da2700ca-465a-f222-3a16-6d57534905d8-534905cc {
   grid-area: span 1 / span 1 / span 1 / span 1;
 }
 
@@ -6271,6 +6338,18 @@ figcaption {
 
 #w-node-_336be75c-ab2b-838b-5642-972b6cc864c8-043ff345 {
   justify-self: start;
+}
+
+#w-node-b116e9f8-66b3-cdcf-5d7e-76275d6570e5-0116ba35 {
+  grid-area: span 3 / span 3 / span 3 / span 3;
+}
+
+#w-node-a131ba94-fb5f-b444-af14-bed58ac4d9dd-69cb6e64 {
+  grid-area: span 10 / span 3 / span 10 / span 3;
+}
+
+#w-node-_1c026d96-923c-e489-0d8c-181c98d597fc-1be16226, #w-node-b8b71023-692a-ae51-ec83-7364f01e2de6-bcb54485 {
+  grid-area: span 3 / span 3 / span 3 / span 3;
 }
 
 #w-node-_5bf3c3a5-ecf7-5c76-b8a8-4c9ec65a5356-f10cd5bb, #w-node-_5bf3c3a5-ecf7-5c76-b8a8-4c9ec65a5359-f10cd5bb {
